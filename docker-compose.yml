@@ -1,8 +1,8 @@
-name : symfony8-2305
+name: symfony8-2305
 volumes:
   db_data: {}
 services:
-  db:
+  db: 
     image: mariadb:10.8.5
     container_name: symfony8-2305-db
     restart: unless-stopped
@@ -12,18 +12,18 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: db_symfony
-      MYSQL_USER: db_symfony
+      MYSQL_USER: user_symfony 
       MYSQL_PASSWORD: azer
-  web:
+  web: 
     # image: php:8.4-apache
     build: 
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     container_name: symfony8-2305-web
     restart: unless-stopped
-    ports: ["9000:8000"]
+    ports: ["9000:80"]
     depends_on: ['db']
     links: ['db']
     volumes:
       - ./src:/var/www/html
-    
+      

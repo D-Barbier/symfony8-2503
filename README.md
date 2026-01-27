@@ -3,10 +3,10 @@
 
 ## Stack technique
 
-- Un serveur web Apache 2.4
-- PHP 8.4
-- Base de données mariadb 11.8.5
-- Composer pour PHP
+- Un serveur web Apache 2.4 OK
+- PHP 8.4 OK
+- Base de données mariadb 11.8.5 OK
+- Composer pour PHP OK
 
 
 - Symfony 8.x
